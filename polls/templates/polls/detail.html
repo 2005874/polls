@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+        {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'polls2/style.css' %}">
 </head>
 <body>
 <h1>{{question.question_text}}</h1>
@@ -18,6 +20,6 @@
     <input type="submit" value="Vote">
 
 </form>
-
+<a href="{% url 'polls:index' %}">Go to index?</a>
 </body>
 </html>
